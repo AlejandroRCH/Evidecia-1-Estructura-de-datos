@@ -22,3 +22,9 @@ for turno in range(3):
     playlist.append((nueva_rola)+"\n")
 
 print(*playlist)
+
+#A continuacion se le pide al usuario que elimine una cancion de la playlist
+print(*playlist)
+borrar = input("Dime el nombre de la cancion que quieres borrar: ")
+playlist.remove(str(borrar))
+print(*playlist)
