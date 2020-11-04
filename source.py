@@ -12,13 +12,13 @@ print(separador)
 #A continuacion se le dara al usuario la opcion de agregar algo mas a la lista
 nueva_rola= list
 nueva_rola = input("Dime la cancion que deseas agregar ")
-playlist.append(nueva_rola)
+playlist.append((nueva_rola)+"\n")
 print(*playlist)
 print(separador)
 #A continuacion se le pide al usuario que agregue 3 canciones mas
 
 for turno in range(3):
     nueva_rola= input("Agrega una nueva cancion ")
-    playlist.append(nueva_rola)
+    playlist.append((nueva_rola)+"\n")
 
 print(*playlist)
