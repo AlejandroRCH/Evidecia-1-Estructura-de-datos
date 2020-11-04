@@ -7,8 +7,8 @@ import random
 separador = ("×" * 25)
 loop = 1
 dado= [1,2,3,4,5,6]
-print(separador)
-
+print(separador +"\n")
+respuestas_validas=["si","SI","Si","sI"]
 while loop == 1:
 
     print(f"Estas son los lados del dado: ")
@@ -17,17 +17,19 @@ while loop == 1:
     print("Se procede a lanzar el dado creado")
     for turno in range(jugadores):
         print(f"Este es el resulado: {random.choice(dado)}")
+    print(separador +"\n")
 
     continuar = str(input("Si desean tirar el dado de nuevo escribe\n Si\n No\n"))
+    print(separador +"\n")
     
-    if continuar == "si" or "Si" or "SI":
+    if continuar in respuestas_validas :
         print("Nice")
-        print(separador)
+        print(separador +"\n")
 
     else:
         print("Vuelve pronto crack")
         loop = 2
-        print(separador)
+        print(separador +"\n")
 
 
 
