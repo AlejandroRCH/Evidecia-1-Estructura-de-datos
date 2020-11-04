@@ -15,6 +15,7 @@ nueva_rola = input("Dime la cancion que deseas agregar ")
 playlist.append((nueva_rola)+"\n")
 print(*playlist)
 print(separador)
+
 #A continuacion se le pide al usuario que agregue 3 canciones mas
 
 for turno in range(3):
@@ -22,9 +23,11 @@ for turno in range(3):
     playlist.append((nueva_rola)+"\n")
 
 print(*playlist)
+print(separador)
 
 #A continuacion se le pide al usuario que elimine una cancion de la playlist
+
 print(*playlist)
 borrar = input("Dime el nombre de la cancion que quieres borrar: ")
-playlist.remove(str(borrar))
+playlist.remove(borrar)
 print(*playlist)
