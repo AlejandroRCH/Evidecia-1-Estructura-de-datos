@@ -2,13 +2,23 @@
 
 #4.1 Aplicacion de listas como estructuras de datos nativas caso teorico
 
-#En este caso necesitamos hacer uso de listas para hacer nuestra lista del mandado
-#para ello se usara el siguiente codigo
-
-lista_mandado= ["naranjas\n","leche\n","manzanas\n","huevos\n","1 kilo de tomates\n","1 kilo de cebolla\n"]
-print(', '.join(lista_mandado))
-
+#En este caso necesitamos crear una playlist
+#a continuacion se le pide al usuario que inserte una nueva cancion
+separador= ( "×" * 25)
+playlist= [" Fresco\n","Islas\n","Poli\n","Las Mañanitas\n","Es Épico\n","Dare\n"]
+print("Esta es la playlist actual:")
+print(*playlist)
+print(separador)
 #A continuacion se le dara al usuario la opcion de agregar algo mas a la lista
-nuevo_producto = input("Dime que deseas agregar al carrito")
-nuevo_producto= list
-lista_mandado.append(nuevo_producto)
+nueva_rola= list
+nueva_rola = input("Dime la cancion que deseas agregar ")
+playlist.append(nueva_rola)
+print(*playlist)
+print(separador)
+#A continuacion se le pide al usuario que agregue 3 canciones mas
+
+for turno in range(3):
+    nueva_rola= input("Agrega una nueva cancion ")
+    playlist.append(nueva_rola)
+
+print(*playlist)
