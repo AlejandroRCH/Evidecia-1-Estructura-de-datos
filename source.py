@@ -2,32 +2,33 @@
 
 #4.1 Aplicacion de listas como estructuras de datos nativas caso teorico
 
-#En este caso necesitamos crear una playlist
-#a continuacion se le pide al usuario que inserte una nueva cancion
-separador= ( "×" * 25)
-playlist= [" Fresco\n","Islas\n","Poli\n","Las Mañanitas\n","Es Épico\n","Dare\n"]
-print("Esta es la playlist actual:")
-print(*playlist)
-print(separador)
-#A continuacion se le dara al usuario la opcion de agregar algo mas a la lista
-nueva_rola= list
-nueva_rola = input("Dime la cancion que deseas agregar ")
-playlist.append((nueva_rola)+"\n")
-print(*playlist)
+#En este caso haremos el codigo que simule el lanzamiento de un dado con 6 lados
+
+separador = ("×" * 25)
+loop = True
+dado= list
+lados_dado= int(input("Dame el numero de caras que quieras para hacer el dado: \n"))
+for x in range(caras):
+    dado.append(x + 1)
+print(f"Estas son los lados del dado:"{dado})
 print(separador)
 
-#A continuacion se le pide al usuario que agregue 3 canciones mas
+jugadores= int(input("Dime cuantos jugadores van a tirar el dado"))
 
-for turno in range(3):
-    nueva_rola= input("Agrega una nueva cancion ")
-    playlist.append((nueva_rola)+"\n")
 
-print(*playlist)
-print(separador)
+while loop == True:
+    print("Se procede a lanzar el dado creado")
+    for turno in range(jugadores):
+        print(f"Este es el resulado: {random.choice(dado)}")
 
-#A continuacion se le pide al usuario que elimine una cancion de la playlist
+    continuar = input("Si desean tirar el dado de nuevo escribe\n Si\n No")
+    if continuar == "si" or "Si" or "SI":
+        print("Nice")
+    else:
+        print("Vuelve pronto crack")
+        loop = False  
 
-print(*playlist)
-borrar = input("Dime el nombre de la cancion que quieres borrar: ")
-playlist.remove(borrar)
-print(*playlist)
+
+
+
+
