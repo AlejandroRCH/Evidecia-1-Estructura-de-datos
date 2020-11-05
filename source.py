@@ -1,5 +1,6 @@
 # PUNTO 3.1
 import os
+import shutil
 separador_punto_3 = ("="*40)
 print(f"El directorio actual de trabajo es {os.getcwd()}\n")
 print("A continuacion mostrara las carpetas y/o documentos:\n ")
@@ -9,6 +10,10 @@ for raiz, dirs, archivos in os.walk(".", topdown=False):
       print(os.path.join(raiz, nombre))
    for nombre in dirs:
       print(os.path.join(raiz, nombre))
+
+#COPIAR ARCHIVO source.py
+ruta_archivo = shutil.copy("source.py", "source_2.py")
+print(ruta_archivo)
 
 print(separador_punto_3)
 
