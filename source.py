@@ -14,6 +14,22 @@ for raiz, dirs, archivos in os.walk(".", topdown=False):
       print(os.path.join(raiz, nombre))
 
 print(separador) # =================================================
+print(separador)
+
+print("****PRUEBA COPIAR UN ARCHIVO DE LOS QUE SE MUESTRAN EN LA BARRA DE LA IZQUIERDA****\n")
+print("NOTA: Recuerda, si un documento tiene espacios en blanco, mayusculas, signos, etc. tambien cuentan\n")
+respuesta_copiar = "si"
+while respuesta_copiar == "si":
+    
+    copiar_doc = input("¿Que documento quieres copiar?: ")
+    ruta_archivo = shutil.copy(copiar_doc, copiar_doc+" - copia")
+    print(f"Este es el documento copia: {ruta_archivo}\n")
+    respuesta_copiar = input("¿Quieres copiar algun otro archivo? 'si''no': \n")
+    
+    if respuesta_copiar == "no":
+        print("Esta bien...Revisa que documentos creaste\n ")
+
+print(separador) # =================================================
 
 #TERMINA 3.1
 
