@@ -1,3 +1,19 @@
+# PUNTO 3.1
+import os
+separador_punto_3 = ("="*40)
+print(f"El directorio actual de trabajo es {os.getcwd()}\n")
+print("A continuacion mostrara las carpetas y/o documentos:\n ")
+
+for raiz, dirs, archivos in os.walk(".", topdown=False):
+   for nombre in archivos:
+      print(os.path.join(raiz, nombre))
+   for nombre in dirs:
+      print(os.path.join(raiz, nombre))
+
+print(separador_punto_3)
+
+#TERMINA 3.1
+
 eleccion = int(input("Presiona el numero donde deseas entrar:\n 1.Capacidad de copiar documentos dentro diresctorios\n 2.Capacidad de mover documentos dentro de directorios\n 3.Apliclacion de listas\n 4.Aplicacion de tuplas\n 5.Comparaciion de consumo de recuros y rendimiento\n "))
 separador = ("»" * 25)
 print(separador +"\n")
