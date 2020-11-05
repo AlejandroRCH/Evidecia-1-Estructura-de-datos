@@ -30,6 +30,42 @@ while respuesta_copiar == "si":
         print("Esta bien...Revisa que documentos creaste\n ")
 
 print(separador) # =================================================
+print(separador)
+
+print("****PRUEBA MOVER UN ARCHIVO DE LOS QUE ACABAS DE COPIAR****\n")
+print("CONSEJO: para fines de la actividad recomendamos que ingreses los documentos deseados en la carpeta 'Sub_directorio'\n")
+print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
+time.sleep(segundos)
+
+for raiz, dirs, archivos in os.walk(".", topdown=False):
+   for nombre in archivos:
+      print(os.path.join(raiz, nombre))
+   for nombre in dirs:
+      print(os.path.join(raiz, nombre))
+
+respuesta_mover = "si"
+while respuesta_mover == "si":
+    
+    mover_doc = input("\n¿Que documento quieres mover?: ")
+    directorio = input("Escribe correctamente el directorio al que quieres mover el documento: ")
+    shutil.move(mover_doc, directorio, copy_function = shutil.copy)
+    print("se ejecuto correctamente")
+    
+    respuesta_mover = input("¿Quieres Mover algun otro archivo? 'si' 'no':\n ")
+    
+    if respuesta_mover == "no":
+        print(separador)
+        print("Estos son los documentos y archivos ACTUALIZADOS: \n")
+        print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
+        time.sleep(segundos)
+        for raiz, dirs, archivos in os.walk(".", topdown=False):
+            for nombre in archivos:
+                print(os.path.join(raiz, nombre))
+            for nombre in dirs:
+                print(os.path.join(raiz, nombre))
+        
+        print("\nFin del punto numero 3.1")
+        print(separador)
 
 #TERMINA 3.1
 
