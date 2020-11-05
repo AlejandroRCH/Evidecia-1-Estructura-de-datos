@@ -1,9 +1,11 @@
 # PUNTO 3.1
 import os
 import shutil
-separador_punto_3 = ("="*40)
-print(f"El directorio actual de trabajo es {os.getcwd()}\n")
-print("A continuacion mostrara las carpetas y/o documentos:\n ")
+import time
+separador = ("="*40)
+segundos = 10
+print(f"Directorio de trabajo ACTUAL:\n{os.getcwd()}\n")
+print("Carpetas y documentos existentes en este directorio:\n ")
 
 for raiz, dirs, archivos in os.walk(".", topdown=False):
    for nombre in archivos:
@@ -11,15 +13,7 @@ for raiz, dirs, archivos in os.walk(".", topdown=False):
    for nombre in dirs:
       print(os.path.join(raiz, nombre))
 
-#COPIAR ARCHIVO source.py
-ruta_archivo = shutil.copy("source.py", "source_2.py")
-print(ruta_archivo)
-
-#MOVER ARCHIVO source2.py
-shutil.move("source_2.py", "Sub_directorio", copy_function = shutil.copy)
-print("se ejecuto correctamente")
-
-print(separador_punto_3)
+print(separador) # =================================================
 
 #TERMINA 3.1
 
