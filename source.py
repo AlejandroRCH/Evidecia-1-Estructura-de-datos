@@ -6,7 +6,7 @@ if eleccion == 3:
     import random
     separador = ("×" * 25)
     loop = 1
-    dado= [1,2,3,4,5,6]
+    dado= [1,2,3,4,5,6,7,8,9,10,11,12]
     print(separador +"\n")
     respuestas_validas=["si","SI","Si","sI"]
     while loop == 1:
