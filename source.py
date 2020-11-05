@@ -15,6 +15,10 @@ for raiz, dirs, archivos in os.walk(".", topdown=False):
 ruta_archivo = shutil.copy("source.py", "source_2.py")
 print(ruta_archivo)
 
+#MOVER ARCHIVO source2.py
+shutil.move("source_2.py", "Sub_directorio", copy_function = shutil.copy)
+print("se ejecuto correctamente")
+
 print(separador_punto_3)
 
 #TERMINA 3.1
