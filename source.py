@@ -1,10 +1,9 @@
 eleccion = int(input("Presiona el numero donde deseas entrar:\n 1.Capacidad de copiar documentos dentro diresctorios\n 2.Capacidad de mover documentos dentro de directorios\n 3.Apliclacion de listas\n 4.Aplicacion de tuplas\n 5.Comparaciion de consumo de recuros y rendimiento\n "))
-separador = ("×" * 25)
+separador = ("»" * 25)
 print(separador +"\n")
 
 if eleccion == 3:
     import random
-    separador = ("×" * 25)
     loop = 1
     dado= [1,2,3,4,5,6,7,8,9,10,11,12]
     print(separador +"\n")
@@ -13,7 +12,7 @@ if eleccion == 3:
         print(f"Estas son los lados del dado: ")
         print(*dado)
         jugadores= int(input("Dime cuantos jugadores van a tirar el dado "))
-        print("Se procede a lanzar el dado creado")
+        print("Se procede a lanzar el dado creado\n")
         for turno in range(jugadores):
             print(f"Este es el resulado: {random.choice(dado)}")
             print(separador +"\n")
@@ -51,7 +50,6 @@ if eleccion == 4:
             print("Vuelve pronto crack")
             loop = 2
             print(separador +"\n")
-
 
 
 
