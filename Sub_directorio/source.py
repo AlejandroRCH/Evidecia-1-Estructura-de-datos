@@ -35,7 +35,7 @@ if eleccion == 2:
     import os
     import shutil
     import time
-    segundos = 7
+    segundos = 5
     print("****PRUEBA MOVER UN ARCHIVO DE LOS QUE ACABAS DE COPIAR****\n")
     print("CONSEJO 1: la CARPETA es 'Sub_directorio' y el DOCUMENTO 'source.py'\n")
     print("CONSEJO 2: Para fines de actividad recomendamos que el archivo que copies lo MUEVAS al directorio 'Sub_directorio'\n")
