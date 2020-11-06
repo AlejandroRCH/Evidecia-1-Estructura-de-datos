@@ -1,77 +1,70 @@
-# PUNTO 3.1
-import os
-import shutil
-import time
-separador = ("="*40)
-segundos = 10
-print(f"Directorio de trabajo ACTUAL:\n{os.getcwd()}\n")
-print("Carpetas y documentos existentes en este directorio:\n ")
-
-for raiz, dirs, archivos in os.walk(".", topdown=False):
-   for nombre in archivos:
-      print(os.path.join(raiz, nombre))
-   for nombre in dirs:
-      print(os.path.join(raiz, nombre))
-
-print(separador) # =================================================
-print(separador)
-
-print("****PRUEBA COPIAR UN ARCHIVO DE LOS QUE SE MUESTRAN EN LA BARRA DE LA IZQUIERDA****\n")
-print("NOTA: Recuerda, si un documento tiene espacios en blanco, mayusculas, signos, etc. tambien cuentan\n")
-respuesta_copiar = "si"
-while respuesta_copiar == "si":
-    
-    copiar_doc = input("¿Que documento quieres copiar?: ")
-    ruta_archivo = shutil.copy(copiar_doc, copiar_doc+" - copia")
-    print(f"Este es el documento copia: {ruta_archivo}\n")
-    respuesta_copiar = input("¿Quieres copiar algun otro archivo? 'si''no': \n")
-    
-    if respuesta_copiar == "no":
-        print("Esta bien...Revisa que documentos creaste\n ")
-
-print(separador) # =================================================
-print(separador)
-
-print("****PRUEBA MOVER UN ARCHIVO DE LOS QUE ACABAS DE COPIAR****\n")
-print("CONSEJO: para fines de la actividad recomendamos que ingreses los documentos deseados en la carpeta 'Sub_directorio'\n")
-print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
-time.sleep(segundos)
-
-for raiz, dirs, archivos in os.walk(".", topdown=False):
-   for nombre in archivos:
-      print(os.path.join(raiz, nombre))
-   for nombre in dirs:
-      print(os.path.join(raiz, nombre))
-
-respuesta_mover = "si"
-while respuesta_mover == "si":
-    
-    mover_doc = input("\n¿Que documento quieres mover?: ")
-    directorio = input("Escribe correctamente el directorio al que quieres mover el documento: ")
-    shutil.move(mover_doc, directorio, copy_function = shutil.copy)
-    print("se ejecuto correctamente")
-    
-    respuesta_mover = input("¿Quieres Mover algun otro archivo? 'si' 'no':\n ")
-    
-    if respuesta_mover == "no":
-        print(separador)
-        print("Estos son los documentos y archivos ACTUALIZADOS: \n")
-        print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
-        time.sleep(segundos)
-        for raiz, dirs, archivos in os.walk(".", topdown=False):
-            for nombre in archivos:
-                print(os.path.join(raiz, nombre))
-            for nombre in dirs:
-                print(os.path.join(raiz, nombre))
-        
-        print("\nFin del punto numero 3.1")
-        print(separador)
-
-#TERMINA 3.1
-
 eleccion = int(input("Presiona el numero donde deseas entrar:\n 1.Capacidad de copiar documentos dentro diresctorios\n 2.Capacidad de mover documentos dentro de directorios\n 3.Apliclacion de listas\n 4.Aplicacion de tuplas\n 5.Comparaciion de consumo de recuros y rendimiento\n "))
 separador = ("»" * 25)
 print(separador +"\n")
+
+
+
+
+if eleccion == 1:
+    import os
+    import shutil
+    import time
+    print(f"Directorio de trabajo ACTUAL:\n{os.getcwd()}\n")
+    print("Carpetas y documentos existentes en este directorio:\n ")
+    
+    for raiz, dirs, archivos in os.walk(".", topdown=False):
+        for nombre in archivos:
+            print(os.path.join(raiz, nombre))
+        for nombre in dirs:
+            print(os.path.join(raiz, nombre))
+    print(separador) # =================================================
+    print(separador)
+    print("****PRUEBA COPIAR UN ARCHIVO DE LOS QUE SE MUESTRAN EN LA BARRA DE LA IZQUIERDA****\n")
+    print("NOTA: Recuerda, si un documento tiene espacios en blanco, mayusculas, signos, etc. tambien cuentan\n")
+    respuesta_copiar = "si"
+    while respuesta_copiar == "si":
+        copiar_doc = input("¿Que documento quieres copiar?: ")
+        ruta_archivo = shutil.copy(copiar_doc, copiar_doc+" - copia")
+        print(f"Este es el documento copia: {ruta_archivo}\n")
+        respuesta_copiar = input("¿Quieres copiar algun otro archivo? 'si''no': \n")
+        
+        if respuesta_copiar == "no":
+            print("Esta bien...Revisa que documentos creaste\n ")
+
+if eleccion == 2:
+    import os
+    import shutil
+    import time
+    segundos = 10
+    print("****PRUEBA MOVER UN ARCHIVO DE LOS QUE ACABAS DE COPIAR****\n")
+    print("CONSEJO: para fines de la actividad recomendamos que ingreses los documentos deseados en la carpeta 'Sub_directorio'\n")
+    print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
+    time.sleep(segundos)
+    for raiz, dirs, archivos in os.walk(".", topdown=False):
+        for nombre in archivos:
+            print(os.path.join(raiz, nombre))
+        for nombre in dirs:
+            print(os.path.join(raiz, nombre))
+            respuesta_mover = "si"
+            
+            while respuesta_mover == "si":
+                mover_doc = input("\n¿Que documento quieres mover?: ")
+                directorio = input("Escribe correctamente el directorio al que quieres mover el documento: ")
+                shutil.move(mover_doc, directorio, copy_function = shutil.copy)
+                print("se ejecuto correctamente")
+                respuesta_mover = input("¿Quieres Mover algun otro archivo? 'si' 'no':\n ")
+                if respuesta_mover == "no":
+                    print(separador)
+                    print("Estos son los documentos y archivos ACTUALIZADOS: \n")
+                    print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
+                    time.sleep(segundos)
+                    for raiz, dirs, archivos in os.walk(".", topdown=False):
+                        for nombre in archivos:
+                            print(os.path.join(raiz, nombre))
+                        for nombre in dirs:
+                            print(os.path.join(raiz, nombre))
+                    print("\nFin del punto numero 3.1")
+                    print(separador)
 
 if eleccion == 3:
     import random
