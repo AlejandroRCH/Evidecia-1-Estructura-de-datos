@@ -4,7 +4,6 @@ print(separador +"\n")
 
 
 
-
 if eleccion == 1:
     import os
     import shutil
