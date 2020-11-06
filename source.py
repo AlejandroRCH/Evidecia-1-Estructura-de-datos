@@ -35,7 +35,7 @@ if eleccion == 2:
     import os
     import shutil
     import time
-    segundos = 10
+    segundos = 7
     print("****PRUEBA MOVER UN ARCHIVO DE LOS QUE ACABAS DE COPIAR****\n")
     print("CONSEJO: para fines de la actividad recomendamos que ingreses los documentos deseados en la carpeta 'Sub_directorio'\n")
     print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
