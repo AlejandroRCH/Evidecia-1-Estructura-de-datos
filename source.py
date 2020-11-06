@@ -20,7 +20,8 @@ if eleccion == 1:
     print(separador) # =================================================
     print(separador)
     print("****PRUEBA COPIAR UN ARCHIVO DE LOS QUE SE MUESTRAN EN LA BARRA DE LA IZQUIERDA****\n")
-    print("NOTA: Recuerda, si un documento tiene espacios en blanco, mayusculas, signos, etc. tambien cuentan\n")
+    print("NOTA 1: Puedes copiar y pegar los documentos desplegados en pantalla para evitar errores.\n")
+    print("NOTA 2: Recuerda, si un documento tiene espacios en blanco, mayusculas, signos, etc. tambien cuentan\n")
     respuesta_copiar = "si"
     while respuesta_copiar == "si":
         copiar_doc = input("¿Que documento quieres copiar?: ")
@@ -37,7 +38,8 @@ if eleccion == 2:
     import time
     segundos = 7
     print("****PRUEBA MOVER UN ARCHIVO DE LOS QUE ACABAS DE COPIAR****\n")
-    print("CONSEJO: para fines de la actividad recomendamos que ingreses los documentos deseados en la carpeta 'Sub_directorio'\n")
+    print("CONSEJO 1: la CARPETA es 'Sub_directorio' y el DOCUMENTO 'source.py'\n")
+    print("CONSEJO 2: Para fines de actividad recomendamos que el archivo que copies lo MUEVAS al directorio 'Sub_directorio'\n")
     print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
     time.sleep(segundos)
     for raiz, dirs, archivos in os.walk(".", topdown=False):
