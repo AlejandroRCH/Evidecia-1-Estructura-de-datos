@@ -26,7 +26,7 @@ if eleccion == 1:
         copiar_doc = input("¿Que documento quieres copiar?: ")
         ruta_archivo = shutil.copy(copiar_doc, copiar_doc+" - copia")
         print(f"Este es el documento copia: {ruta_archivo}\n")
-        respuesta_copiar = input("¿Quieres copiar algun otro archivo? 'si''no': \n")
+        respuesta_copiar = input("¿Quieres copiar algun otro archivo? 'si''no':")
         
         if respuesta_copiar == "no":
             print("Esta bien...Revisa que documentos creaste\n ")
@@ -37,8 +37,8 @@ if eleccion == 2:
     import time
     segundos = 5
     print("****PRUEBA MOVER UN ARCHIVO DE LOS QUE ACABAS DE COPIAR****\n")
-    print("CONSEJO 1: la CARPETA es 'Sub_directorio' y el DOCUMENTO 'source.py'\n")
-    print("CONSEJO 2: Para fines de actividad recomendamos que el archivo que copies lo MUEVAS al directorio 'Sub_directorio'\n")
+    print("CONSEJO 1: la CARPETA es 'MUEVE_AQUI' y el DOCUMENTO 'source.py'\n")
+    print("CONSEJO 2: Para fines de actividad recomendamos que el archivo que copies lo MUEVAS al directorio 'MUEVE_AQUI'\n")
     print(f"En {segundos} segundos se actualizara la carpeta de archivos\n")
     time.sleep(segundos)
     for raiz, dirs, archivos in os.walk(".", topdown=False):
